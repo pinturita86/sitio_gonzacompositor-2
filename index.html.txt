@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gonza · Compositor de Bandas Sonoras</title>
+  <meta name="description" content="Música original para cine, series, videojuegos y contenidos. Composición, orquestación y producción.">
+  <meta name="theme-color" content="#0e0e12">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <style>
+    :root{--bg:#0b0c10;--fg:#e6e6e6;--muted:#b9b9b9;--accent:#7cc5ff;--card:#12141a;--line:#232633}
+    *{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.5}
+    a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+    nav a{margin-left:18px;color:var(--muted)}nav a:hover{color:var(--fg)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:48px 0}
+    .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 12px}
+    .btn{padding:12px 18px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);cursor:pointer}
+    .btn.primary{background:linear-gradient(135deg,#1e90ff,#8a2be2);border:none}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+    .grid{display:grid;gap:20px}.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    section{padding:28px 0;border-top:1px solid var(--line)}h2{margin:0 0 14px;font-size:clamp(22px,3vw,28px)}
+    .contact-form label{display:block;margin:.5rem 0 .25rem}
+    .contact-form input,.contact-form textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:#0f1117;color:#e6e6e6}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .reel{aspect-ratio:16/9;width:100%;border:0;border-radius:12px;overflow:hidden;background:#000}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}}
+    .note{color:var(--muted);font-size:.9rem}
+    footer{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="container">
+    <strong>Gonza · Compositor</strong>
+    <nav aria-label="Navegación principal">
+      <a href="#trabajos">Trabajos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#reel">Reel</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Bandas sonoras con identidad y emoción</h1>
+        <p class="note">Cine, series y videojuegos. Leitmotifs claros, texturas híbridas y dinámica “a lo Sawano”.</p>
+        <div class="chips"><span>🎬 Cine</span><span>🎮 Videojuegos</span><span>📺 Series</span><span>📣 Trailers</span></div>
+        <div style="margin-top:14px">
+          <a class="btn primary" href="#contacto">Solicitar presupuesto</a>
+          <a class="btn" href="#reel">Escuchar reel</a>
+        </div>
+      </div>
+      <div class="card">
+        <iframe class="reel" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Reel — Gonzacompositor" allowfullscreen></iframe>
+        <p class="note" style="margin-top:8px">Para cambiar el reel: reemplazá el ID de YouTube en el HTML.</p>
+      </div>
+    </section>
+
+    <section id="trabajos">
+      <h2>Selección de trabajos</h2>
+      <div class="grid cols-3">
+        <div class="card">Proyecto 1 · teaser</div>
+        <div class="card">Proyecto 2 · gameplay</div>
+        <div class="card">Proyecto 3 · corto</div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <div class="grid cols-3">
+        <div class="card"><h3>Composición original</h3><p class="note">Leitmotifs y diseño temático para sostener la narrativa.</p></div>
+        <div class="card"><h3>Orquestación & mockups</h3><p class="note">Texturas híbridas, brass épico y percusión cinemática.</p></div>
+        <div class="card"><h3>Entrega y stems</h3><p class="note">Stems por familias, versiones TV/Trailer, loudness estándar.</p></div>
+      </div>
+    </section>
+
+    <section id="reel">
+      <h2>Reel</h2>
+      <div class="card">
+        <iframe class="reel" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Reel — Gonzacompositor" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="grid cols-2">
+        <form class="card contact-form" onsubmit="return sendMailto(event)">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+          <button class="btn primary" type="submit">Enviar</button>
+        </form>
+        <div class="card">
+          <h3 style="margin-top:0">Email directo</h3>
+          <p><a href="mailto:contacto@gonzacompositor.com">contacto@gonzacompositor.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container" style="border-top:1px solid var(--line)">
+    © 2025 gonzacompositor.com · Hecho en Argentina
+  </footer>
+
+  <script>
+    function sendMailto(e){
+      e.preventDefault();
+      const to = 'contacto@gonzacompositor.com';
+      const nombre = document.getElementById('nombre').value.trim();
+      const correo = document.getElementById('email').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+      const subject = encodeURIComponent('Nuevo mensaje desde gonzacompositor.com');
+      const body = encodeURIComponent(Nombre: ${nombre}\\nEmail: ${correo}\\n\\n${mensaje});
+      window.location.href = mailto:${to}?subject=${subject}&body=${body};
+      setTimeout(()=>{ window.location.href='gracias/index.html'; }, 1200);
+      return false;
+    }
+  </script>
+</body>
+</html>

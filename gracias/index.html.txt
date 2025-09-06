@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¡Gracias! · Mensaje enviado</title>
+  <style>
+    body{margin:0;background:#0b0c10;color:#e6e6e6;font-family:system-ui,Roboto,sans-serif;line-height:1.5}
+    .wrap{max-width:720px;margin:0 auto;padding:48px 24px}
+    .card{background:#12141a;border:1px solid #232633;border-radius:16px;padding:24px}
+    a{color:#7cc5ff}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>¡Gracias!</h1>
+      <p>Tu mensaje fue iniciado. Si tu cliente de correo no se abrió, escribime a <a href="mailto:contacto@gonzacompositor.com">contacto@gonzacompositor.com</a>.</p>
+      <p><a href="/">Volver al sitio</a></p>
+    </div>
+  </div>
+</body>
+</html>
